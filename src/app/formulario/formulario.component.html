@@ -1,0 +1,18 @@
+<form [formGroup]="formulario" (ngSubmit)="EnviarDatos()" novalidate>
+  <ul>
+    <li><input type="text" formControlName="titulo"  placeholder="nota"></li>
+
+    <label for="estado">select</label>
+    <select name="estado" formControlName="estado" id="estado" multiple>
+      <option value="abierto">abierto</option>
+      <option value="proceso">en proceso</option>
+      <option value="cerrado">cerrado</option>
+    </select>
+
+    <label for="descipcion">descipcion</label>
+    <textarea id="descipcion" formControlName="descripcion" maxlength="150" name="descipcion" rows="4" cols="50">
+
+
+    <a [routerLink]="['/lista-Notas']" routerLinkActive="router-link-active">   <button type="submit" >Enviar</button> </a>
+  </ul>
+</form>
